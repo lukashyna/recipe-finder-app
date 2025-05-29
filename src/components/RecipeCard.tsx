@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import placeholder from '../app/assets/img/placeholder.jpg';
 
 interface RecipeCardProps {
     id: number;
@@ -13,7 +14,7 @@ export default function RecipeCard({ id, image, title }: RecipeCardProps) {
             <div className="flex h-full flex-col rounded-lg bg-white p-4 shadow transition hover:shadow-lg">
                 <div className="relative mb-4 aspect-[4/3] w-full overflow-hidden rounded">
                     <Image
-                        src={image || '../app/assets/img/placeholder.jpg'}
+                        src={image || placeholder}
                         alt={title}
                         fill
                         priority
